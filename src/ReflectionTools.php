@@ -353,7 +353,7 @@ class ReflectionTools
                 $result .= ', ';
             }
 
-            if ($parameter->allowsNull() && ! $parameter->isDefaultValueAvailable()) {
+            if ($parameter->allowsNull() && ! $parameter->isDefaultValueAvailable() && ! $parameter->isVariadic()) {
                 $result .= '?';
             }
 
